@@ -20,6 +20,7 @@ namespace discrete_math_final_project
         #region Properties
         public double X { get; set; }
         public double Y { get; set; }
+        public static Random rand = new Random();
         #endregion
 
         #region Methods
@@ -35,6 +36,11 @@ namespace discrete_math_final_project
             }
             this.X += pointToAdd.X;
             this.Y += pointToAdd.Y;
+        }
+
+        public static XYPoint GetRandomPoint()
+        {
+            return new XYPoint(rand.Next(), rand.Next());
         }
         #endregion
     }
