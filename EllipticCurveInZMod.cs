@@ -12,8 +12,8 @@ namespace discrete_math_final_project
         // base parameter b is set to equal y^2 - x^3 - a*x
         public EllipticCurveInZMod(int n)
         {
-            this.X = rand.Next();
-            this.Y = rand.Next();
+            this.X = rand.Next(1, 101);
+            this.Y = rand.Next(1, 101);
             this.Mod = n;
             base.A = rand.Next() % n;
             base.B = (int)(Math.Pow(Y, 2) - Math.Pow(X, 3) - A * X);
