@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,7 +23,12 @@ namespace discrete_math_final_project
         #endregion
 
         #region Methods
-
+        public void SumWithPoint(Point pointToAdd)
+        {
+            // TODO: There could be a problem with double overflow in this part, so that would be good to fix
+            this.X += pointToAdd.X;
+            this.Y += pointToAdd.Y;
+        }
         #endregion
     }
 }
