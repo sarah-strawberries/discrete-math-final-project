@@ -8,17 +8,13 @@ namespace discrete_math_final_project
 {
     internal class EllipticCurve
     {
-        #region Constructor
-        public EllipticCurve(double a, double b) 
-        {
-            this.A = a;
-            this.B = b;
-        }
+        #region Constructors
+        public EllipticCurve() { }
         #endregion
 
         #region Properties
-        public double A { get; set; }
-        public double B { get; set; }
+        public int A { get; protected set; }
+        public int B { get; protected set; }
         #endregion
 
         #region Methods
