@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("discrete-math-final-project")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+07c71a2c071ea5a9d9175f7be4d7d03bf46c1a5c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+84d0afaa1ae6bc15793bb88d7469a7e4c846a9f1")]
 [assembly: System.Reflection.AssemblyProductAttribute("discrete-math-final-project")]
 [assembly: System.Reflection.AssemblyTitleAttribute("discrete-math-final-project")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
