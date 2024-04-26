@@ -17,7 +17,6 @@ namespace discrete_math_final_project
             this.Y = y;
             this.Mod = n;
             base.A = rand.Next() % n;
-           
             base.B = (int)(Math.Pow(y, 2) - Math.Pow(x, 3) - A * x);
         }
         #endregion
