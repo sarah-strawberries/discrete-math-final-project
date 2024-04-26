@@ -20,7 +20,7 @@ namespace discrete_math_final_project
             //The following line is for testing purposes
             if (!this.ExistsAtPoint(this.X))
             {
-                throw new Exception("The function does not exist at point x and some debugging needs to be done to fix this.");
+                throw new Exception("The function does not exist at point x, and some debugging needs to be done to fix this.");
             }
         }
         #endregion
