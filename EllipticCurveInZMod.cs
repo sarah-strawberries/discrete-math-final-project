@@ -16,7 +16,7 @@ namespace discrete_math_final_project
             this.Y = rand.Next();
             this.Mod = n;
             base.A = rand.Next() % n;
-            base.B = (int)(Math.Pow(y, 2) - Math.Pow(X, 3) - A * X);
+            base.B = (int)(Math.Pow(Y, 2) - Math.Pow(X, 3) - A * X);
             //The following line is for testing purposes
             if (!this.ExistsAtPoint(this.X))
             {
