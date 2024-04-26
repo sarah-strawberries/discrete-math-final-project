@@ -4,6 +4,7 @@ class Program
 {
     public static void Main(string[] args)
     {
+        EllipticCurveInZMod curve; 
         bool programIsRunning = true;
         string userInput;
         int n = 0;
@@ -32,6 +33,10 @@ class Program
                 }
             }
             // do stuff with curve
+
+            curve = new EllipticCurveInZMod(n);
+            Console.WriteLine($"Random elliptic curve in Z mod {n}Z:\n");
+            Console.WriteLine(curve.ToString());
 
             Console.WriteLine("Would you like to factor another number? (y/n)");
             userInput = Console.ReadLine().ToLower();
