@@ -25,7 +25,14 @@ namespace discrete_math_final_project
         #region Methods
         public void SumWithPoint(Point pointToAdd)
         {
-            // TODO: There could be a problem with double overflow in this part, so that would be good to fix
+            if ((this.X + pointToAdd.X) > double.MaxValue)
+            {
+                throw new ArgumentException("The points could not be added because to do so would result in overflow.");
+            }
+            if ((this.Y + pointToAdd.Y) > double.MaxValue)
+            {
+                throw new ArgumentException("The points could not be added because to do so would result in overflow.");
+            }
             this.X += pointToAdd.X;
             this.Y += pointToAdd.Y;
         }
