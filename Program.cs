@@ -38,7 +38,7 @@ class Program
             while (!(userInput == "y") && !(userInput == "n"))
             {
                 Console.WriteLine("Please type \"y\" or \"n\" to indicate yes or no. Would you like to factor another number?");
-                Console.ReadLine();
+                userInput = Console.ReadLine();
             }
             if (userInput == "y") 
             {
