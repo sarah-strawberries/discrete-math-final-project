@@ -23,7 +23,7 @@ namespace discrete_math_final_project
             string equation = "y^2 = x^3 ";
             if (A < 0)
             {
-                equation += $"- {A}x ";
+                equation += $"- {Math.Abs(A)}x ";
             }
             else
             {
@@ -32,7 +32,7 @@ namespace discrete_math_final_project
 
             if (B < 0)
             {
-                equation += $"- {B}";
+                equation += $"- {Math.Abs(B)}";
             }
             else
             {
