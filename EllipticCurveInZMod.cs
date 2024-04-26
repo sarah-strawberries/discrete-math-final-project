@@ -9,15 +9,19 @@ namespace discrete_math_final_project
     internal class EllipticCurveInZMod : EllipticCurve
     {
         #region Constructor
-
         // base parameter b is set to equal y^2 - x^3 - a*x
-        public EllipticCurveInZMod(int n, int x, int y)
+        public EllipticCurveInZMod(int n)
         {
-            this.X = x;
-            this.Y = y;
+            this.X = rand.Next();
+            this.Y = rand.Next();
             this.Mod = n;
             base.A = rand.Next() % n;
-            base.B = (int)(Math.Pow(y, 2) - Math.Pow(x, 3) - A * x);
+            base.B = (int)(Math.Pow(y, 2) - Math.Pow(X, 3) - A * X);
+            //The following line is for testing purposes
+            if (!this.ExistsAtPoint(this.X))
+            {
+                throw new Exception("The function does not exist at point x and some debugging needs to be done to fix this.");
+            }
         }
         #endregion
 
