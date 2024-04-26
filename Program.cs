@@ -4,26 +4,50 @@ class Program
 {
     public static void Main(string[] args)
     {
+        bool programIsRunning = true;
         string userInput;
         int n = 0;
-        Console.WriteLine("Please enter a nonzero integer to be factored.");
-        userInput = Console.ReadLine();
 
-        while (n == 0)
+        while (programIsRunning)
         {
-            try
+            Console.WriteLine("Welcome, user! This program demonstrates Lenstra's Elliptic Curve Factorization. This algorithm is especially helpful for finding factors of large integers.\n");
+            Console.WriteLine("Please enter a nonzero integer to be factored.");
+            userInput = Console.ReadLine();
+
+            while (n == 0)
             {
-                n = Int32.Parse(userInput);
-                if (n == 0)
+                try
                 {
-                    Console.WriteLine("Input integer must not be 0. Please try again.");
+                    n = Int32.Parse(userInput);
+                    if (n == 0)
+                    {
+                        Console.WriteLine("Input integer must not be 0. Please try again.");
+                        userInput = Console.ReadLine();
+                    }
+                }
+                catch
+                {
+                    Console.WriteLine("Input must be an integer. Please try again.");
                     userInput = Console.ReadLine();
                 }
             }
-            catch
+            // do stuff with curve
+
+            Console.WriteLine("Would you like to factor another number? (y/n)");
+            userInput = Console.ReadLine().ToLower();
+            while (!(userInput == "y") && !(userInput == "n"))
             {
-                Console.WriteLine("Input must be an integer. Please try again.");
-                userInput = Console.ReadLine();
+                Console.WriteLine("Please type \"y\" or \"n\" to indicate yes or no. Would you like to factor another number?");
+                Console.ReadLine();
+            }
+            if (userInput == "y") 
+            {
+                n = 0; // reset n so that input validation works
+            }
+            if (userInput == "n")
+            {
+                Console.WriteLine("\nThanks for using this program; we hope you enjoyed this demonstration of Lenstra's Elliptic Curve Factorization! Have a nice day!");
+                programIsRunning = false;
             }
         }
     }
