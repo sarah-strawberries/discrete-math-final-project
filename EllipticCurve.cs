@@ -122,6 +122,9 @@ namespace discrete_math_final_project
         /// <returns></returns>
         public static XYPoint GetThirdPointOnCurveGivenTwoPoints(XYPoint firstPoint, XYPoint secondPoint)
         {
+            // The following line should be removed once this method is finished
+            throw new NotImplementedException();
+
             // Find slope between point1 and point2
             double slope = Calculator.GetSlopeBetweenPoints(firstPoint, secondPoint);
             // guess third point using binary search
@@ -133,6 +136,9 @@ namespace discrete_math_final_project
 
         public double BinarySearchForExistingXValueBetweenPoints(XYPoint point1, XYPoint point2)
         {
+            // The following line should be removed once this method is finished
+            throw new NotImplementedException();
+
             if (point1.X == point2.X)
             {
                 throw new ArgumentException("X values of the two points are the same.");
@@ -175,7 +181,8 @@ namespace discrete_math_final_project
                 //   1b) Adding "sanity check"
 
                 //     This line is for the purpose of determining whether we're moving closer to the correct point (the 3rd, not 1st or 2nd) based on whether the line is above or below the curve
-                FigureOutWhetherLineIsAboveCurveAtPointsAandB(lineYValueAtPointA, lineYValueAtPointB,);
+
+                // FigureOutWhetherLineIsAboveCurveAtPointsAandB(lineYValueAtPointA, lineYValueAtPointB,); // <-- this line needs its other parameters still
                 
                 //     Get difference between y points by subtracting the smaller from the greater
                 //     and see which difference is greater
@@ -234,14 +241,19 @@ namespace discrete_math_final_project
 
         public void FigureOutWhetherLineIsAboveCurveAtPoints(XYPoint point1, XYPoint point2, double deltaX, LinearCurve lineBetweenPoints)
         {
+            // The following line should be removed once this method is finished
+            throw new NotImplementedException();
+
+            Tuple<double, double> curveYValuesAtPointToLeftOfPoint1;
             // Get points to left and right of point1 on the curve
             try 
             { 
-                Tuple<double, double> curveYValuesAtPointToLeftOfPoint1 = GetValuesAtPoint(point1.X - deltaX / 10);
+                curveYValuesAtPointToLeftOfPoint1 = GetValuesAtPoint(point1.X - deltaX / 10);
             }
             catch
             {
-                // Point
+                // This is part of the previous logic where I used to think I could determine that a point was tangent to the curve.
+                // However, it actually won't work the way I was going to try it, so this method's logic needs to be changed somewhat.
             }
 
             double curveAtPointToLeftOfPoint1 = curveYValuesAtPointToLeftOfPoint1.Item1 > curveYValuesAtPointToLeftOfPoint1.Item2 ? 

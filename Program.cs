@@ -32,9 +32,11 @@ class Program
                     userInput = Console.ReadLine();
                 }
             }
-            // do stuff with curve
 
             curve = new EllipticCurveInZMod(n);
+
+            // insert factorization with curve -- this is eventually supposed to be accomplished through the elliptic curve's ability to add points
+
             Console.WriteLine($"Random elliptic curve in Z mod {n}Z:\n");
             Console.WriteLine(curve.ToString());
 
